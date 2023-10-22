@@ -53,7 +53,9 @@
         <button type="submit">전송</button>
     </form>
     <div class="chain">
-        <p>현재 블록 값:{{ block }}</p>
+        {% for data in blockchain_data %}
+        <p>{{ data.number }}번째, hash:{{ data.block }}, Nonce: {{ data.nonce }}</p>
+        {% endfor %}
     </div>
 </body>
 </html>
